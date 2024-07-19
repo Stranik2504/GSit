@@ -46,7 +46,7 @@ commands:
   gsitreload:
 
     usage: /<command>
-    aliases: [gsitrl]
+    aliases: [gsitrl, sitreload, sirtl]
     description: Plugin reload command
     permission: GSit.Reload
 

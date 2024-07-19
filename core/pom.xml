@@ -75,7 +75,7 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.github.TechFortress</groupId>
+            <groupId>com.github.GriefPrevention</groupId>
             <artifactId>GriefPrevention</artifactId>
             <version>${griefprevention.version}</version>
             <scope>provided</scope>

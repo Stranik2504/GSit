@@ -1,5 +1,6 @@
 package dev.geco.gsit.events;
 
+import dev.geco.gsit.objects.GetUpReason;
 import org.bukkit.*;
 import org.bukkit.block.*;
 import org.bukkit.block.data.Bisected.*;
@@ -44,8 +45,13 @@ public class InteractEvents implements Listener {
         if(!GPM.getEnvironmentUtil().isInAllowedWorld(player)) return;
 
         if(!player.isValid() || player.isSneaking()) return;
+        
+        if (GPM.getSitManager().isSitting(player)) {
+            if (GPM.getCManager().CAN_TRANSFER) GPM.getSitManager().removeSeat(player, GetUpReason.ACTION, true);
+            else return;
+        }
 
-        if(GPM.getSitManager().isSitting(player) || GPM.getPoseManager().isPosing(player) || GPM.getCrawlManager().isCrawling(player)) return;
+        if(GPM.getPoseManager().isPosing(player) || GPM.getCrawlManager().isCrawling(player)) return;
 
         double distance = GPM.getCManager().S_MAX_DISTANCE;
 

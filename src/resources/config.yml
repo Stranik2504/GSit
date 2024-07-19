@@ -33,6 +33,9 @@ Options:
 
   # Center the player on the block when sitting or posing
   center-block: true
+  
+  # Allow player to transfer when player sitting
+  can-transfer: true
 
   # Show a custom message when a player begins sitting or posing
   custom-message: true

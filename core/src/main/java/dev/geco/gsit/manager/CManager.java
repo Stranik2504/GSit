@@ -33,6 +33,8 @@ public class CManager {
     public boolean SAME_BLOCK_REST;
 
     public boolean CENTER_BLOCK;
+    
+    public boolean CAN_TRANSFER;
 
     public boolean CUSTOM_MESSAGE;
 
@@ -142,6 +144,7 @@ public class CManager {
         ALLOW_UNSAFE = GPM.getConfig().getBoolean("Options.allow-unsafe", false);
         SAME_BLOCK_REST = GPM.getConfig().getBoolean("Options.same-block-rest", false);
         CENTER_BLOCK = GPM.getConfig().getBoolean("Options.center-block", true);
+        CAN_TRANSFER = GPM.getConfig().getBoolean("Options.can-transfer", true);
         CUSTOM_MESSAGE = GPM.getConfig().getBoolean("Options.custom-message", true);
 
         S_SITMATERIALS.clear();
